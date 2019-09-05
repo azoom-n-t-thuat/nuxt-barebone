@@ -14,9 +14,11 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
+    "@rsmdc/button": "^1.1.16",
     "@rsmdc/nuxt": "./rsmdc-nuxt",
     "nuxt": "^2.0.0",
     "rsmdc": "^0.39.1-beta.2",
+    "sass": "^1.23.0-module.beta.1",
     "vuex-pathify": "1.1.3"
   },
   "devDependencies": {
