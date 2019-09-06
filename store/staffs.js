@@ -1,0 +1,65 @@
+import { make } from 'vuex-pathify'
+
+export const state = () => ({
+  staff: {
+    summary: {
+      contactLogs: {
+        needUpdatingContact: {}
+      }
+    }
+  },
+  count: 0
+})
+
+export const mutations = {
+  ...make.mutations(state)
+}
+
+export const getters = {
+  ...make.getters(state),
+  getTotalItemCount: (_) => {
+    let count = 0
+    const needUpdatingContact = _.staff.summary.contactLogs.needUpdatingContact
+    for (const key in needUpdatingContact) {
+      const value = needUpdatingContact[key]
+      if (value && typeof value === 'number') count += value
+    }
+    return count
+  },
+  getContactLogs: (_) => {
+    if (
+      _.staff &&
+      _.staff.summary &&
+      _.staff.summary.contactLogs &&
+      _.staff.summary.contactLogs.needUpdatingContact
+    )
+      return _.staff.summary.contactLogs.needUpdatingContact
+    return {}
+  }
+}
+
+export const actions = {
+  ...make.actions(state),
+  getContactLogSummary(context, params = {}) {
+    const res = {
+      summary: {
+        contactLogs: {
+          needUpdatingContact: {
+            receptionist: 1,
+            heard: 2,
+            sendAvailableMail: 3,
+            sendAvailableMailDirectMng: 4,
+            sendAvailableMailLeopalace: 4,
+            sendFollowUpMail: 3,
+            toContact: 1,
+            prospects: 2,
+            contractAdjustment: 2,
+            reversing: 7,
+            sendFollowMail: 1
+          }
+        }
+      }
+    }
+    context.commit('SET_STAFF', res)
+  }
+}

@@ -1,7 +1,7 @@
 .content-card {
   width: 960px;
   margin: 0 auto;
-  .content-card__header {
+  > .header {
     height: 40px;
     line-height: 40px;
     background-color: #607d8b;
@@ -9,68 +9,11 @@
     padding-left: 20px;
     color: #ffffff;
   }
-  .content-card__body {
+  > .body {
     padding: 20px;
     background-color: #ffffff;
     font-size: 13px;
-    .mdc-card {
-      box-shadow: 0 1px 3px #ccc;
-    }
-    .mdc-card:hover {
-      box-shadow: 0 3px 9px #ccc;
-      background-color: #f5f5f5;
-    }
-    .sum {
-      display: flex;
-      align-items: center;
-      font-size: 13px;
-      strong {
-        color: #ec407a;
-        .number {
-          font-size: 20px;
-        }
-      }
-      .btn-card {
-        padding: 10px 24px;
-        margin-left: 10px;
-        color: #42a5f5;
-        font-weight: bold;
-        cursor: pointer;
-      }
-    }
-    .list-card {
-      display: flex;
-      flex-wrap: wrap;
-      margin-left: -10px;
-      margin-right: -10px;
-      .item-card {
-        width: 25%;
-        padding: 0 10px;
-        margin-top: 20px;
-        .mdc-card {
-          position: relative;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          height: 48px;
-          align-items: center;
-          padding: 0 16px;
-          color: #42a5f5;
-          font-weight: bold;
-          cursor: pointer;
-          .card-number {
-            .number {
-              font-size: 24px;
-              font-weight: bold;
-            }
-          }
-        }
-        .mdc-card:hover .contact-logs-tooltip {
-          visibility: visible;
-          opacity: 1;
-        }
-      }
-    }
+    font-weight: bold;
   }
 }
 

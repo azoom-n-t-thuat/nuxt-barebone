@@ -1,15 +1,20 @@
 <template>
   <div class="container">
-    <content-card></content-card>
+    <content-card>
+      <div slot="header">⚠️ 2週間以上ステータスを変更していない案件</div>
+      <contact-logs-notification slot="body" />
+    </content-card>
   </div>
 </template>
 
 <script>
 import ContentCard from '~/components/home-page/content-card.vue'
+import ContactLogsNotification from '~/components/home-page/contact-logs-notification.vue'
 
 export default {
   components: {
-    ContentCard
+    ContentCard,
+    ContactLogsNotification
   }
 }
 </script>
