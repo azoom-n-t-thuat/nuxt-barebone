@@ -2,7 +2,14 @@
   <div class="container">
     <content-card>
       <!-- Hiện tại chưa dùng svg nên sử dụng tạm hình icon -->
-      <div slot="header">⚠️ 2週間以上ステータスを変更していない案件</div>
+      <div slot="header">
+        <img
+          style="color: #ffffff"
+          class="icon"
+          src="@/assets/svg/warning.svg"
+        />
+        2週間以上ステータスを変更していない案件
+      </div>
       <contact-logs-notification slot="body" />
     </content-card>
   </div>
