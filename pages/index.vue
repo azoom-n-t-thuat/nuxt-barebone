@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <content-card>
-      <!-- Hiện tại chưa dùng svg nên sử dụng tạm hình icon -->
       <div slot="header" class="-alignmiddle">
         <img class="icon" src="@/assets/svg/warning.svg" />
         <span>2週間以上ステータスを変更していない案件</span>
