@@ -4,6 +4,9 @@
     align-items: center;
     font-size: 13px;
   }
+  > .navbar > .summary {
+    display: flex;
+  }
   > .navbar > .summary > .number {
     color: #ec407a;
   }

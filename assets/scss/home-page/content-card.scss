@@ -19,20 +19,16 @@
 
 @media (min-width: 481px) and (max-width: 767px) {
   .content-card {
-    .content-card__body {
-      .list-card .item-card {
-        width: 50%;
-      }
+    > .body > .contact-logs-notification > .content > .contact-logs-info-card {
+      width: 50%;
     }
   }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .content-card {
-    .content-card__body {
-      .list-card .item-card {
-        width: 100%;
-      }
+    > .body > .contact-logs-notification > .content > .contact-logs-info-card {
+      width: 100%;
     }
   }
 }

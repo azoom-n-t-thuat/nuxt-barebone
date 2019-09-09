@@ -2,7 +2,7 @@
   <div class="contact-logs-notification">
     <div class="navbar">
       <div class="summary">
-        <div class="number">{{ getContactLogSummary }} 件</div>
+        <div class="number">{{ getContactLogSummary }} 件&nbsp;</div>
         の案件があります。
       </div>
       <div class="mdc-card btn-card" @click="checkAll()">
@@ -13,8 +13,8 @@
       <contact-logs-info-card
         v-for="(key, value, index) in getContactLogs"
         :key="index"
-        :contactLogsKey="key"
-        :contactLogsValue="value"
+        :contact-logs-key="key"
+        :contact-logs-value="value"
       >
       </contact-logs-info-card>
     </div>

@@ -6,5 +6,6 @@
     <div class="body">
       <slot name="body" />
     </div>
+    <slot />
   </div>
 </template>
