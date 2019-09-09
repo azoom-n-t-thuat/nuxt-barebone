@@ -10,25 +10,8 @@
     color: #ffffff;
   }
   > .body {
-    padding: 20px;
     background-color: #ffffff;
     font-size: 13px;
     font-weight: bold;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-  .content-card {
-    > .body > .contact-logs-notification > .content > .contact-logs-info-card {
-      width: 50%;
-    }
-  }
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-  .content-card {
-    > .body > .contact-logs-notification > .content > .contact-logs-info-card {
-      width: 100%;
-    }
   }
 }

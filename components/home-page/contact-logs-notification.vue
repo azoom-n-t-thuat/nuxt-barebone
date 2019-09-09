@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-logs-notification">
+  <div class="contact-logs-notification mdc-layout-grid">
     <div class="navbar">
       <div class="summary">
         <div class="number">{{ getContactLogSummary }} 件&nbsp;</div>
@@ -9,8 +9,9 @@
         全て確認
       </div>
     </div>
-    <div class="content">
+    <div class="inner">
       <contact-logs-info-card
+        class="cell -span3-desktop -span4-tablet -span4-phone"
         v-for="(key, value, index) in getContactLogs"
         :key="index"
         :contact-logs-key="key"
