@@ -11,7 +11,7 @@
     </div>
     <div class="inner">
       <contact-logs-info-card
-        class="cell -span3-desktop -span4-tablet -span4-phone"
+        class="cell -span3desktop -span4tablet -span4phone"
         v-for="(key, value, index) in getContactLogs"
         :key="index"
         :contact-logs-key="key"
