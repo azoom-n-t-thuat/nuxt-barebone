@@ -1,23 +1,24 @@
 <template>
-  <div class="contact-logs-notification mdc-layout-grid">
+  <div class="mdc-layout-grid contact-logs-notification">
     <div class="navbar">
       <div class="summary">
-        <div class="number">{{ getContactLogSummary }} 件&nbsp;</div>
+        <div class="number">
+          <strong>{{ totalItemCount }}</strong> 件&nbsp;
+        </div>
         の案件があります。
       </div>
-      <div class="mdc-card btn-card" @click="checkAll()">
+      <div class="mdc-card btn-card" @click="checkAllContactStatues()">
         全て確認
       </div>
     </div>
     <div class="inner">
       <contact-logs-info-card
-        class="cell -span3desktop -span4tablet -span4phone"
-        v-for="(key, value, index) in getContactLogs"
+        class="cell -span3desktop"
+        v-for="(key, value, index) in contactLogs"
         :key="index"
         :contact-logs-key="key"
         :contact-logs-value="value"
-      >
-      </contact-logs-info-card>
+      />
     </div>
   </div>
 </template>
@@ -30,14 +31,14 @@ export default {
     ContactLogsInfoCard
   },
   computed: {
-    getContactLogSummary: get('staffs/getTotalItemCount'),
-    getContactLogs: get('staffs/getContactLogs')
+    totalItemCount: get('staffs/getTotalItemCount'),
+    contactLogs: get('staffs/getContactLogs')
   },
   mounted() {
     dispatch('staffs/getContactLogSummary')
   },
   methods: {
-    checkAll() {
+    checkAllContactStatues() {
       console.log(56, this.getContactLogs)
     }
   }

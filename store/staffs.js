@@ -18,13 +18,13 @@ export const mutations = {
 export const getters = {
   ...make.getters(state),
   getTotalItemCount: (_) => {
-    let count = 0
-    const needUpdatingContact = _.staff.summary.contactLogs.needUpdatingContact
-    for (const key in needUpdatingContact) {
-      const value = needUpdatingContact[key]
-      if (value && typeof value === 'number') count += value
-    }
-    return count
+    return Object.values(
+      _.staff.summary.contactLogs.needUpdatingContact
+    ).reduce((totalCount, value) => {
+      if (Number.isFinite(value)) {
+        return (totalCount += value)
+      }
+    }, 0)
   },
   getContactLogs: (_) => {
     if (

@@ -7,9 +7,13 @@
   }
   > .navbar > .summary {
     display: flex;
+    align-items: center;
   }
   > .navbar > .summary > .number {
     color: #ec407a;
+  }
+  > .navbar > .summary > .number > strong {
+    font-size: 20px;
   }
   > .navbar > .btn-card {
     padding: 10px 24px;
@@ -17,5 +21,8 @@
     color: #42a5f5;
     font-weight: bold;
     cursor: pointer;
+  }
+  > .inner {
+    color: #42a5f5;
   }
 }
