@@ -8,15 +8,15 @@
     text-align: left;
     padding-left: 24px;
     color: #ffffff;
-    img.icon {
-      width: 24px;
-      height: 24px;
-      margin-right: 5px;
-    }
   }
   > .header > .-alignmiddle {
     display: flex;
     align-items: center;
+  }
+  > .header > .-alignmiddle > img.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
   }
   > .body {
     background-color: #ffffff;

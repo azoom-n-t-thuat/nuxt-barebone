@@ -7,8 +7,7 @@ export const state = () => ({
         needUpdatingContact: {}
       }
     }
-  },
-  count: 0
+  }
 })
 
 export const mutations = {
