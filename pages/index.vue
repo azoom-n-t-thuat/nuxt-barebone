@@ -2,7 +2,10 @@
   <div class="container">
     <content-card>
       <div slot="header" class="-alignmiddle">
-        <img class="icon" src="@/assets/svg/warning.svg" />
+        <img
+          class="icon"
+          src="@/assets/svg/190530_2週間以上ステータスを変更していない案件.svg"
+        />
         <span>2週間以上ステータスを変更していない案件</span>
       </div>
       <contact-logs-notification slot="body" />
@@ -11,13 +14,13 @@
 </template>
 
 <script>
-import ContentCard from '~/components/home-page/content-card.vue'
-import ContactLogsNotification from '~/components/home-page/contact-logs-notification.vue'
+import contentCard from '~/components/home-page/content-card.vue'
+import contactLogsNotification from '~/components/home-page/contact-logs-notification.vue'
 
 export default {
   components: {
-    ContentCard,
-    ContactLogsNotification
+    contentCard,
+    contactLogsNotification
   }
 }
 </script>

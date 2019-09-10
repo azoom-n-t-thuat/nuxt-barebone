@@ -1,0 +1,26 @@
+.mdc-drawer {
+  z-index: 9998;
+  width: 230px;
+  max-width: none;
+  top: 0px;
+
+  &.-expand {
+    width: calc(100% - 72px);
+  }
+
+  &.-right {
+    left: auto;
+    right: 0;
+  }
+}
+.mdc-top-app-bar {
+  &.-primary {
+    background-color: #607d8b;
+  }
+  > .row > .section > .title {
+    color: #ffffff;
+  }
+}
+.mdc-drawer-scrim {
+  z-index: 5000;
+}
