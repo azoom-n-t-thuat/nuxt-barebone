@@ -1,26 +1,26 @@
 <template>
   <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        minuet-barebone
-      </h1>
-      <h2 class="subtitle">
-        A test nuxt project with some libraries installed
-      </h2>
-      <div class="rsmdc-demo">
-        <button class="mdc-button -outline">This is a rsmdc button</button>
+    <content-card>
+      <div slot="header" class="-alignmiddle">
+        <img
+          class="icon"
+          src="@/assets/svg/190530_2週間以上ステータスを変更していない案件.svg"
+        />
+        <span>2週間以上ステータスを変更していない案件</span>
       </div>
-    </div>
+      <contact-logs-notification slot="body" />
+    </content-card>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import contentCard from '~/components/home-page/content-card.vue'
+import contactLogsNotification from '~/components/home-page/contact-logs-notification.vue'
 
 export default {
   components: {
-    Logo
+    contentCard,
+    contactLogsNotification
   }
 }
 </script>
@@ -33,6 +33,7 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: #eeeeee;
 }
 
 .title {

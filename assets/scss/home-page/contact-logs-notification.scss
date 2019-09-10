@@ -1,0 +1,28 @@
+.contact-logs-notification {
+  > .navbar {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  > .navbar > .summary {
+    display: flex;
+    align-items: center;
+  }
+  > .navbar > .summary > .number {
+    color: #ec407a;
+  }
+  > .navbar > .summary > .number > strong {
+    font-size: 20px;
+  }
+  > .navbar > .btn-card {
+    padding: 10px 24px;
+    margin-left: 10px;
+    color: #42a5f5;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  > .inner {
+    color: #42a5f5;
+  }
+}
